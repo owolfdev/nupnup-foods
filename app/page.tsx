@@ -9,7 +9,7 @@ export default function Home() {
         width={600}
         height={400}
         priority
-        className="max-w-full h-auto"
+        className="max-w-full h-auto -mt-32"
       />
     </div>
   );
