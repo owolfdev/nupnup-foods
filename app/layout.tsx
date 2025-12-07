@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="w-full px-8 py-3">
+        <header className="w-full px-8 py-3 relative z-50">
           <nav className="flex items-center justify-between max-w-7xl mx-auto h-[60px]">
             <Link href="/" className="shrink-0 h-full flex items-center">
               <Image

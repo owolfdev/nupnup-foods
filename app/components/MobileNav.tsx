@@ -14,22 +14,22 @@ export default function MobileNav() {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="md:hidden flex flex-col gap-1 w-6 h-6 focus:outline-none pt-1"
+        className="md:hidden relative w-6 h-6 focus:outline-none z-[60] flex items-center justify-center"
         aria-label="Toggle menu"
       >
         <span
-          className={`block h-[3px] w-6 bg-primary transition-all duration-300 ${
-            isOpen ? "rotate-45 translate-y-2" : ""
+          className={`absolute h-[3px] w-6 bg-primary transition-all duration-300 origin-center ${
+            isOpen ? "rotate-45" : "-translate-y-[9px] rotate-0"
           }`}
         />
         <span
-          className={`block h-[3px] w-6 bg-primary transition-all duration-300 ${
-            isOpen ? "opacity-0" : ""
+          className={`absolute h-[3px] w-6 bg-primary transition-all duration-300 ${
+            isOpen ? "opacity-0" : "opacity-100"
           }`}
         />
         <span
-          className={`block h-[3px] w-6 bg-primary transition-all duration-300 ${
-            isOpen ? "-rotate-45 -translate-y-2" : ""
+          className={`absolute h-[3px] w-6 bg-primary transition-all duration-300 origin-center ${
+            isOpen ? "-rotate-45" : "translate-y-[9px] rotate-0"
           }`}
         />
       </button>
