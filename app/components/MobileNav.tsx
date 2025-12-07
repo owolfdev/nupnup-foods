@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from "react";
+import Link from "next/link";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,22 +14,22 @@ export default function MobileNav() {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="md:hidden flex flex-col gap-1.5 w-6 h-6 focus:outline-none"
+        className="md:hidden flex flex-col gap-1 w-6 h-6 focus:outline-none pt-1"
         aria-label="Toggle menu"
       >
         <span
-          className={`block h-0.5 w-6 bg-primary transition-all duration-300 ${
-            isOpen ? 'rotate-45 translate-y-2' : ''
+          className={`block h-[3px] w-6 bg-primary transition-all duration-300 ${
+            isOpen ? "rotate-45 translate-y-2" : ""
           }`}
         />
         <span
-          className={`block h-0.5 w-6 bg-primary transition-all duration-300 ${
-            isOpen ? 'opacity-0' : ''
+          className={`block h-[3px] w-6 bg-primary transition-all duration-300 ${
+            isOpen ? "opacity-0" : ""
           }`}
         />
         <span
-          className={`block h-0.5 w-6 bg-primary transition-all duration-300 ${
-            isOpen ? '-rotate-45 -translate-y-2' : ''
+          className={`block h-[3px] w-6 bg-primary transition-all duration-300 ${
+            isOpen ? "-rotate-45 -translate-y-2" : ""
           }`}
         />
       </button>
@@ -45,21 +45,21 @@ export default function MobileNav() {
       {/* Sheet */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col p-6 pt-20">
+        <div className="flex flex-col gap-4 p-8 text-gray-600">
           <Link
             href="/about"
             onClick={closeMenu}
-            className="text-gray-700 hover:text-primary transition-colors font-medium py-4 text-lg border-b border-gray-200"
+            className="transition-colors font-semibold"
           >
             About
           </Link>
           <Link
             href="/products"
             onClick={closeMenu}
-            className="text-gray-700 hover:text-primary transition-colors font-medium py-4 text-lg border-b border-gray-200"
+            className="transition-colors font-semibold"
           >
             Products
           </Link>
@@ -68,5 +68,3 @@ export default function MobileNav() {
     </>
   );
 }
-
-

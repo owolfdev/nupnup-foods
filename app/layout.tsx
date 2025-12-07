@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="w-full px-4">
+        <header className="w-full px-8 py-3">
           <nav className="flex items-center justify-between max-w-7xl mx-auto h-[60px]">
             <Link href="/" className="shrink-0 h-full flex items-center">
               <Image
@@ -44,16 +44,16 @@ export default function RootLayout({
                 className="h-full w-auto"
               />
             </Link>
-            <div className="hidden md:flex gap-8 items-center h-full">
+            <div className="hidden md:flex gap-8 items-center h-full pr-2">
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-primary transition-colors font-medium leading-none"
+                className="text-gray-600 hover:text-primary transition-colors leading-none"
               >
                 About
               </Link>
               <Link
                 href="/products"
-                className="text-gray-700 hover:text-primary transition-colors font-medium leading-none"
+                className="text-gray-600 hover:text-primary transition-colors leading-none"
               >
                 Products
               </Link>
@@ -64,7 +64,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="sticky bottom-0 w-full py-4 text-center text-sm text-gray-600">
+        <footer className="sticky bottom-0 w-full py-6 text-center text-gray-600">
           © {currentYear} Nup Nup Foods
         </footer>
       </body>
