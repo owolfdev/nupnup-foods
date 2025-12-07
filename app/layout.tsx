@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "./components/MobileNav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,19 +32,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="w-full px-8">
-          <nav className="flex items-center justify-between max-w-7xl mx-auto h-[81px]">
+        <header className="w-full px-4">
+          <nav className="flex items-center justify-between max-w-7xl mx-auto h-[60px]">
             <Link href="/" className="shrink-0 h-full flex items-center">
               <Image
                 src="/logo/logo.png"
                 alt="Nup Nup Foods Logo"
-                width={200}
-                height={81}
+                width={150}
+                height={60}
                 priority
                 className="h-full w-auto"
               />
             </Link>
-            <div className="flex gap-8 items-center h-full">
+            <div className="hidden md:flex gap-8 items-center h-full">
               <Link
                 href="/about"
                 className="text-gray-700 hover:text-primary transition-colors font-medium leading-none"
@@ -56,6 +57,9 @@ export default function RootLayout({
               >
                 Products
               </Link>
+            </div>
+            <div className="md:hidden">
+              <MobileNav />
             </div>
           </nav>
         </header>
