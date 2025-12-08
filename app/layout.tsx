@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./components/MobileNav";
+import ProductsDropdown from "./components/ProductsDropdown";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -51,12 +52,7 @@ export default function RootLayout({
               >
                 About
               </Link>
-              <Link
-                href="/products"
-                className="text-gray-600 hover:text-primary transition-colors leading-none"
-              >
-                Products
-              </Link>
+              <ProductsDropdown />
             </div>
             <div className="md:hidden">
               <MobileNav />
@@ -64,7 +60,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="sticky bottom-0 w-full py-6 text-center text-gray-600">
+        <footer className="w-full py-6 text-center text-gray-600 mt-auto">
           © {currentYear} Nup Nup Foods
         </footer>
       </body>

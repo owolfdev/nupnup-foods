@@ -56,13 +56,16 @@ export default function MobileNav() {
           >
             About
           </Link>
-          <Link
-            href="/products"
-            onClick={closeMenu}
-            className="transition-colors font-semibold"
-          >
-            Products
-          </Link>
+          <div className="flex flex-col gap-2">
+            <span className="font-semibold text-gray-900">Products</span>
+            <Link
+              href="/products/coconut-syrup"
+              onClick={closeMenu}
+              className="transition-colors pl-4 text-gray-600 hover:text-primary"
+            >
+              Coconut Syrup
+            </Link>
+          </div>
         </div>
       </div>
     </>

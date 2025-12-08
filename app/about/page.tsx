@@ -1,9 +1,21 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
-      <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8 md:mb-12">
+      <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-8 md:mb-12">
         About Nup Nup Foods
       </h1>
+
+      <div className="mb-8 md:mb-12">
+        <Image
+          src="/images/website/nupnup/coconut-blossom.jpg"
+          alt="Coconut blossom"
+          width={1200}
+          height={800}
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
 
       <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed">
         <p>
@@ -28,6 +40,16 @@ export default function About() {
           cooking, cafés, and product developers who want consistency without
           artificial additives.
         </p>
+
+        <div className="my-8">
+          <Image
+            src="/images/website/nupnup/pancakes.jpg"
+            alt="Pancakes with Thai Nectar"
+            width={1200}
+            height={800}
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
 
         <p>
           Nup Nup Foods operates with a disciplined approach to sourcing,
