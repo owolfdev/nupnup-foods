@@ -7,13 +7,13 @@ export default function CoconutSyrup() {
         Thai Nectar — Coconut Syrup
       </h1>
       <p className="text-lg text-gray-600 mb-8 md:mb-12 italic">
-        A natural sweetener made from Thailand's coconut blossom.
+        A natural sweetener made from Thailand&apos;s coconut blossom.
       </p>
 
       <div className="mb-8 md:mb-12">
         <Image
-          src="/images/website/nupnup/coconut-syrup.jpg"
-          alt="Thai Nectar Coconut Syrup"
+          src="/images/website/nupnup/pancakes.jpg"
+          alt="Pancakes with Thai Nectar"
           width={1200}
           height={800}
           className="w-full h-auto rounded-lg"
@@ -33,16 +33,25 @@ export default function CoconutSyrup() {
             use in kitchens, cafés, and food products.
           </p>
           <p>
-            Unlike refined sugar, coconut syrup retains its natural minerals
-            and depth of flavor. It dissolves easily, mixes well into hot or
-            cold drinks, and adds gentle richness without overpowering other
+            Unlike refined sugar, coconut syrup retains its natural minerals and
+            depth of flavor. It dissolves easily, mixes well into hot or cold
+            drinks, and adds gentle richness without overpowering other
             ingredients.
           </p>
+          <div className="my-8">
+            <Image
+              src="/images/website/nupnup/coconut-syrup-label.jpg"
+              alt="Thai Nectar Coconut Syrup Label"
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
         </section>
 
         <section>
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
-            What It's Made From
+            What It&apos;s Made From
           </h2>
           <ul className="list-disc list-inside space-y-2">
             <li>100% coconut blossom sap</li>
@@ -50,6 +59,15 @@ export default function CoconutSyrup() {
             <li>Heated gently to concentrate into syrup</li>
             <li>No additives, no artificial flavoring, no preservatives</li>
           </ul>
+          <div className="my-8">
+            <Image
+              src="/images/website/nupnup/coconut-blossom-2.jpg"
+              alt="Coconut blossom"
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
         </section>
 
         <section>
@@ -82,6 +100,15 @@ export default function CoconutSyrup() {
                   Baking as a 1:1 sugar alternative (adjust liquid slightly)
                 </li>
               </ul>
+              <div className="my-8">
+                <Image
+                  src="/images/website/nupnup/breakfast.jpg"
+                  alt="Breakfast with Thai Nectar"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -103,9 +130,7 @@ export default function CoconutSyrup() {
             Why Choose Coconut Syrup
           </h2>
           <ul className="list-disc list-inside space-y-2">
-            <li>
-              Naturally low-glycemic relative to refined sugar
-            </li>
+            <li>Naturally low-glycemic relative to refined sugar</li>
             <li>Plant-based and minimally processed</li>
             <li>Sustainably sourced from Thai coconut farms</li>
             <li>
@@ -125,9 +150,7 @@ export default function CoconutSyrup() {
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
             Allergen Information
           </h2>
-          <p>
-            Contains no common allergens. Gluten-free, dairy-free, vegan.
-          </p>
+          <p>Contains no common allergens. Gluten-free, dairy-free, vegan.</p>
         </section>
 
         <section>
@@ -171,7 +194,8 @@ export default function CoconutSyrup() {
           <div className="space-y-4">
             <p>
               Thai Nectar began with a simple idea: bring the pure sweetness of
-              Thailand's coconut blossom to breakfast tables around the world.
+              Thailand&apos;s coconut blossom to breakfast tables around the
+              world.
             </p>
             <p>
               For generations, Thai artisans have crafted syrup from the nectar
@@ -185,12 +209,14 @@ export default function CoconutSyrup() {
             </p>
             <p>
               Every bottle begins in small coconut groves across Thailand, where
-              skilled harvesters climb the trees at dawn to collect fresh blossom
-              nectar. The syrup is then gently cooked to preserve its natural
-              aroma—notes of caramel, toasted coconut, and tropical warmth.
-              Nothing artificial. No corn syrup. No shortcuts.
+              skilled harvesters climb the trees at dawn to collect fresh
+              blossom nectar. The syrup is then gently cooked to preserve its
+              natural aroma—notes of caramel, toasted coconut, and tropical
+              warmth. Nothing artificial. No corn syrup. No shortcuts.
             </p>
-            <p className="font-semibold">Just the authentic taste of Thailand.</p>
+            <p className="font-semibold">
+              Just the authentic taste of Thailand.
+            </p>
             <p>
               Thai Nectar is made for: pancakes & waffles, iced coffee & Thai
               tea, desserts & baking, chefs, cafés, and home kitchens.
@@ -200,9 +226,9 @@ export default function CoconutSyrup() {
               culture—not manufactured in a refinery.
             </p>
             <p>
-              With Thai Nectar, we're building more than a syrup brand. We're
-              creating a bridge between Thai tradition and global kitchens—one
-              delicious pour at a time.
+              With Thai Nectar, we&apos;re building more than a syrup brand.
+              We&apos;re creating a bridge between Thai tradition and global
+              kitchens—one delicious pour at a time.
             </p>
             <p className="font-semibold text-primary">
               Thai Nectar. Authentic. Natural. Crafted in Thailand.
@@ -213,4 +239,3 @@ export default function CoconutSyrup() {
     </div>
   );
 }
-

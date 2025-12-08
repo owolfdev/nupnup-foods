@@ -43,8 +43,8 @@ export default function About() {
 
         <div className="my-8">
           <Image
-            src="/images/website/nupnup/pancakes.jpg"
-            alt="Pancakes with Thai Nectar"
+            src="/images/website/nupnup/coconut-syrup.jpg"
+            alt="Thai Nectar Coconut Syrup"
             width={1200}
             height={800}
             className="w-full h-auto rounded-lg"
