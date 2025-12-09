@@ -121,6 +121,15 @@ export default function CoconutSyrup() {
                 <li>Cocktail syrups</li>
                 <li>Marinades and glazes</li>
               </ul>
+              <div className="my-8">
+                <Image
+                  src="/images/website/nupnup/culinary-collage.jpg"
+                  alt="Culinary uses of Thai Nectar"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
