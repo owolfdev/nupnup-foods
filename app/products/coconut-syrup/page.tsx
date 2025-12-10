@@ -239,7 +239,7 @@ export default function CoconutSyrup() {
               We&apos;re creating a bridge between Thai tradition and global
               kitchens—one delicious pour at a time.
             </p>
-            <p className="font-semibold text-primary">
+            <p className="font-semibold text-gray-900">
               Thai Nectar. Authentic. Natural. Crafted in Thailand.
             </p>
           </div>

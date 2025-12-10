@@ -34,7 +34,7 @@ export default function About() {
         </p>
 
         <p>
-          Our first product line, <strong className="text-primary">Thai Nectar</strong>, is a natural syrup
+          Our first product line, <strong className="text-gray-900">Thai Nectar</strong>, is a natural syrup
           series that highlights Thailand's coconut and blossom sugar profile.
           The aim is practical: a clean, versatile sweetener that fits home
           cooking, cafés, and product developers who want consistency without

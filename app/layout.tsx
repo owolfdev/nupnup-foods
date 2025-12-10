@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./components/MobileNav";
 import ProductsDropdown from "./components/ProductsDropdown";
+import LogoutButton from "./components/LogoutButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -53,15 +54,24 @@ export default function RootLayout({
                 About
               </Link>
               <ProductsDropdown />
+              <LogoutButton />
             </div>
             <div className="md:hidden">
               <MobileNav />
             </div>
           </nav>
         </header>
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 flex flex-col">{children}</main>
         <footer className="w-full py-6 text-center text-gray-600 mt-auto">
-          © {currentYear} Nup Nup Foods
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+            <span>© {currentYear} Nup Nup Foods</span>
+            <Link
+              href="/brand"
+              className="text-gray-600 hover:text-primary transition-colors"
+            >
+              Partners
+            </Link>
+          </div>
         </footer>
       </body>
     </html>
