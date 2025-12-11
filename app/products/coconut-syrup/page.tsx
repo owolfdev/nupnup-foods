@@ -196,7 +196,7 @@ export default function CoconutSyrup() {
           </ul>
         </section>
 
-        <section className="border-t pt-8 mt-8">
+        {/* <section className="border-t pt-8 mt-8">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
             Brand Story
           </h2>
@@ -243,6 +243,20 @@ export default function CoconutSyrup() {
               Thai Nectar. Authentic. Natural. Crafted in Thailand.
             </p>
           </div>
+        </section> */}
+
+        <section className="border-t pt-8 mt-8">
+          {/* <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+            Story
+          </h2> */}
+          <p className=" text-gray-700 leading-relaxed">
+            Thai Nectar is a natural coconut blossom syrup inspired by
+            generations of Thai craft. Smooth, warm, and gently caramelized,
+            it&apos;s a cleaner alternative to processed syrups and a more
+            accessible upgrade to maple. Made from real coconut blossom sugar,
+            Thai Nectar brings authentic Thai sweetness to pancakes, coffee, and
+            everyday cooking — simple, honest, and naturally delicious.
+          </p>
         </section>
       </div>
     </div>
