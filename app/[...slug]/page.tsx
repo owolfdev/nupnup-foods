@@ -41,8 +41,8 @@ export default async function MDXPage({ params }: PageProps) {
 
   return (
     <AuthGuard validKeys={validKeys}>
-      <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
-        <div className="prose prose-lg max-w-none space-y-6 text-gray-700 leading-relaxed prose-headings:!text-gray-900">
+      <div className="w-full px-4 md:px-8 py-12 md:py-16">
+        <div className="max-w-3xl mx-auto prose prose-lg space-y-6 text-gray-700 leading-relaxed prose-headings:!text-gray-900">
           <MDXRemote
             source={content}
             options={{
