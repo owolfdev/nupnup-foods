@@ -1,4 +1,5 @@
 import Image from "next/image";
+import EmailCapture from "../../components/EmailCapture";
 
 export default function CoconutSyrup() {
   return (
@@ -257,6 +258,10 @@ export default function CoconutSyrup() {
             Thai Nectar brings authentic Thai sweetness to pancakes, coffee, and
             everyday cooking — simple, honest, and naturally delicious.
           </p>
+        </section>
+
+        <section className="mt-12">
+          <EmailCapture productName="Thai Nectar Coconut Syrup" />
         </section>
       </div>
     </div>

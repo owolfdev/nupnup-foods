@@ -18,8 +18,87 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nup Nup Foods",
-  description: "Nup Nup Foods",
+  title: {
+    default: "Nup Nup Foods | Natural Thai Ingredients & Coconut Syrup",
+    template: "%s | Nup Nup Foods",
+  },
+  description:
+    "Nup Nup Foods is a Thailand-based food company creating simple, high-quality products from local ingredients. Discover Thai Nectar coconut blossom syrup—a natural, low-glycemic sweetener perfect for home cooking, cafés, and foodservice.",
+  keywords: [
+    "Thai Nectar",
+    "coconut syrup",
+    "coconut blossom syrup",
+    "natural sweetener",
+    "Thai food products",
+    "low glycemic syrup",
+    "coconut sugar",
+    "natural syrup",
+    "Thailand food",
+  ],
+  authors: [{ name: "Nup Nup Foods" }],
+  creator: "Nup Nup Foods",
+  publisher: "Nup Nup Foods",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://nupnup.co"
+  ),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: "Nup Nup Foods",
+    title: "Nup Nup Foods | Natural Thai Ingredients & Coconut Syrup",
+    description:
+      "Nup Nup Foods is a Thailand-based food company creating simple, high-quality products from local ingredients. Discover Thai Nectar coconut blossom syrup—a natural, low-glycemic sweetener.",
+    images: [
+      {
+        url: "/logo/logo.png",
+        width: 150,
+        height: 60,
+        alt: "Nup Nup Foods Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nup Nup Foods | Natural Thai Ingredients & Coconut Syrup",
+    description:
+      "Nup Nup Foods is a Thailand-based food company creating simple, high-quality products from local ingredients. Discover Thai Nectar coconut blossom syrup.",
+    images: ["/logo/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "android-chrome-192x192",
+        url: "/android-chrome-192x192.png",
+      },
+      {
+        rel: "android-chrome-512x512",
+        url: "/android-chrome-512x512.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
