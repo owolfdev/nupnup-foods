@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./components/MobileNav";
 import ProductsDropdown from "./components/ProductsDropdown";
-import LogoutButton from "./components/LogoutButton";
+import FooterLinks from "./components/FooterLinks";
+import AuthToggle from "./components/AuthToggle";
+import { getAuthKeys } from "@/lib/authKeys";
 import "./globals.css";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // ✅ add
@@ -30,6 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const currentYear = new Date().getFullYear();
+  const { partnerKeys, adminKeys } = getAuthKeys();
 
   return (
     <html lang="en">
@@ -56,7 +59,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <header className="w-full sm:px-8 px-4 py-3 relative z-50">
-          <nav className="flex items-center justify-between max-w-7xl mx-auto h-[60px]">
+          <nav className="flex items-center justify-between max-w-7xl mx-auto h-[60px] gap-4">
             <Link href="/" className="shrink-0 h-full flex items-center">
               <Image
                 src="/logo/logo.png"
@@ -75,10 +78,14 @@ export default function RootLayout({
                 About
               </Link>
               <ProductsDropdown />
-              <LogoutButton />
             </div>
-            <div className="md:hidden">
-              <MobileNav />
+            <div className="flex items-center gap-3">
+              <div className="hidden md:block">
+                <AuthToggle variant="icon" />
+              </div>
+              <div className="md:hidden">
+                <MobileNav />
+              </div>
             </div>
           </nav>
         </header>
@@ -88,12 +95,7 @@ export default function RootLayout({
         <footer className="w-full py-6 text-center text-gray-600 mt-auto">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <span>© {currentYear} Nup Nup Foods</span>
-            <Link
-              href="/brand"
-              className="text-gray-600 hover:text-primary transition-colors"
-            >
-              Partners
-            </Link>
+            <FooterLinks partnerKeys={partnerKeys} adminKeys={adminKeys} />
           </div>
         </footer>
       </body>

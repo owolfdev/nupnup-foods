@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import AuthToggle from "./AuthToggle";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +66,9 @@ export default function MobileNav() {
             >
               Coconut Syrup
             </Link>
+          </div>
+          <div className="pt-4 border-t border-gray-100">
+            <AuthToggle variant="text" onAction={closeMenu} />
           </div>
         </div>
       </div>

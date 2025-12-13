@@ -3,7 +3,15 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export default function LogoutButton() {
+interface LogoutButtonProps {
+  className?: string;
+  onLogout?: () => void;
+}
+
+export default function LogoutButton({
+  className = "",
+  onLogout,
+}: LogoutButtonProps) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const router = useRouter();
 
@@ -37,8 +45,10 @@ export default function LogoutButton() {
 
   const handleLogout = () => {
     localStorage.removeItem("auth_key");
+    localStorage.removeItem("auth_role");
     setIsAuthenticated(false);
     window.dispatchEvent(new Event("auth-change"));
+    onLogout?.();
     router.refresh();
   };
 
@@ -49,10 +59,9 @@ export default function LogoutButton() {
   return (
     <button
       onClick={handleLogout}
-      className="text-gray-600 hover:text-primary transition-colors leading-none"
+      className={`text-gray-600 hover:text-primary transition-colors leading-none ${className}`}
     >
       Logout
     </button>
   );
 }
-
